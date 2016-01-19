@@ -1,0 +1,19 @@
+.ttlink:hover .tooltip { /* NEW */
+    display: block;
+}
+
+
+.tooltip{
+    display: none;  /* NEW */
+    background: #C8C8C8;
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width:200px;
+    height:100px;
+}
+
+.ttlink {
+    margin:100px;
+}
