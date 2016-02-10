@@ -22,7 +22,7 @@ h2 {
   /*main title for chapter*/
   font-size: 80px;
   text-align: left;
-  line-height: 85px;
+  line-height: 90px;
   font-family: "sans-serif";
   padding-top: 105px;
   width: 80%;
@@ -64,6 +64,7 @@ section.module p {
 /* nav bar */
 
 .nav-bar {
+  font-family: "Courier New", Courier, monospace;
   position: fixed;
   top:50px;
   padding-left: 25px;
@@ -90,7 +91,34 @@ section.module p {
 .nav-bar li a {
   /*text-decoration: none;*/
 	font-size:15px;
-	color: #000;
-	font-family: Arial, Helvetica, sans-serif; 
+	color: #000; 
 }
 
+.nav-bar2 {
+  font-family: "Courier New", Courier, monospace;
+  position: fixed;
+  bottom:170px;
+  padding-left: 25px;
+  width: 180px;
+  height: 0px;
+  background-color: #000;
+  background-color: white;
+}
+
+.nav-bar2 ul{
+    background-color: (#000);
+    float: left;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0px;
+    list-style-type: none;
+    float: left;
+
+}
+
+.nav-bar2 li a {
+  text-decoration: none;
+  font-size:15px;
+  color: #000;
+}
