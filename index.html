@@ -35,7 +35,7 @@
 
 
 </head>
-<body>
+<body onload="init();">
 
 
 <!--[if lt IE 7]>
@@ -110,7 +110,7 @@
   <div class="container">
     
    <h4>The portrait of the internal traitor.</h4> 
-   <img src="abstract.jpg" alt="abstract" style="width:1071px;height:734 px;">
+   <img class="pixel" src="abstract.jpg" alt="abstract" style="display:none;">
 <p>(Within the prologue I would like to give a hint and set a tone of the main topic trough personal connection to it. “How I met my internal traitor” is a story on facing the unconscious mind. It describes why do I call it traitor and how it become the topic of my graduation (graphic design) thesis. For those who would like to skip this part due to lack of interest of this information, it won’t influence on understanding the further thesis content. Because of it, the prologue will be possible in use only in process of writing in order to help myself be more specific and make as concrete point as possible.)</p>
 
 <p>A sign of sanity.
@@ -307,31 +307,13 @@ Thus The Beholder recapitulates in his own brain a creative process which parall
 - The great leader of Vienna school of medicine, Rokitansky, influenced not only Freud but also Klimt. </p>
 
 
-     <script>   
- 
-var mousex = e.pageX + 20; //Get X coordinates
-    var mousey = e.pageY + 10; //Get Y coordinates
-   if((mousey+100)>$(window).height())
-   {
+    <img id="image" class="pixel" src="vika mac1.jpg" style="display:none;">
+    <img id="image" class="pixel" src="vika mac1.jpg" style="display:block;">
 
-    $('.tooltip2')
-    .css({ top: mousey-100 ,left: mousex })
 
-   }
-   else if((mousex+200)>$(window).width())
-   {
-      $('.tooltip2')
-    .css({ top: mousey ,left: mousex-200})
 
-   }
-   else
-    {
-   $('.tooltip2')
-    .css({ top: mousey, left: mousex })
-
-    }
-
-</script>
+  </div>
+</section>
 
 
 
@@ -339,6 +321,51 @@ var mousex = e.pageX + 20; //Get X coordinates
 
 
 
+
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="lib/MochiKit/Base.js" type="text/javascript"></script>
+    <script src="lib/MochiKit/DOM.js" type="text/javascript"></script>
+    <script src="lib/MochiKit/Style.js" type="text/javascript"></script>
+    <script src="lib/MochiKit/Color.js" type="text/javascript"></script>
+    <script src="lib/SVGKit.js"></script>
+    <script src="lib/SVGCanvas.js"></script>
+
+
+    <script type="text/javascript" >
+      init = function() {
+
+        $(".pixel").each(function(i, el) {
+            $img = $(el);
+            var $canvas = $('<canvas id="canvas1" width="1080" height="720" style="display:none;"></canvas>');
+            $img.before($canvas);
+
+            var context1 = $canvas[0].getContext('2d');
+            var context2 = new SVGCanvas( $( window ).width(), $( window ).height() );
+            $img.after( context2.svg.svgElement );
+
+            var htmlImage = $img[ 0 ];
+            context1.drawImage( htmlImage, 0, 0 );
+
+
+            for( var i = 0; i < 1020; i++ ){
+              var x = Math.round( Math.random() * htmlImage.width);
+              var y = Math.round( Math.random() * htmlImage.height);
+              var imageData = context1.getImageData( x, y, 1, 1 );
+              var pixel = imageData.data;
+              var red = pixel[ 0 ];
+              var green = pixel[ 1 ];
+              var blue = pixel[ 2 ];
+              
+              context2.fillStyle = 'rgb( ' + red + ', ' + green + ', ' + blue + ' )';
+              context2.beginPath();
+              context2.arc( x * 1, y * 1, Math.random() * 30, 0, 2 * Math.PI );
+              context2.fill();
+            }          
+        })      
+
+
+      }
+     </script>
 
 
 
