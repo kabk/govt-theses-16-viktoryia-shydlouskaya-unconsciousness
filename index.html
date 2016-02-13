@@ -317,11 +317,6 @@ Thus The Beholder recapitulates in his own brain a creative process which parall
 
 
 
-
-
-
-
-
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="lib/MochiKit/Base.js" type="text/javascript"></script>
     <script src="lib/MochiKit/DOM.js" type="text/javascript"></script>
@@ -358,7 +353,7 @@ Thus The Beholder recapitulates in his own brain a creative process which parall
               
               context2.fillStyle = 'rgb( ' + red + ', ' + green + ', ' + blue + ' )';
               context2.beginPath();
-              context2.arc( x * 1, y * 1, Math.random() * 30, 0, 2 * Math.PI );
+              context2.arc( x + 30, y + 30, Math.random() * 30, 0, 2 * Math.PI );
               context2.fill();
             }          
         })      
