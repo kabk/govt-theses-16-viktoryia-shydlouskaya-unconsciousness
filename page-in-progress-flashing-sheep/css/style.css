@@ -1,0 +1,31 @@
+html{
+  font-family: helvetica,arial,sans-serif;
+  color:#fff;
+}
+
+h1{
+  font-size:5em;
+  padding-top:5%;
+}
+
+h3{
+  font-size:2em;
+}
+
+body{
+  background-color: #333333;
+}
+
+#container{
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+#Fluff {
+  stroke: #000;
+}
