@@ -1,0 +1,281 @@
+
+@page {
+    size: A4;
+    margin-left: 30mm;
+    margin-bottom:30mm;
+    margin-top:10mm;
+    bleed: 6pt;
+    marks: crop;
+}
+h2 {
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  line-height: 70px;
+  font-size: 79px;
+  font-family: Times new roman;
+  text-decoration: none;
+  padding-top: -20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: black;
+}
+
+h3 {
+  font-size:16px;
+  font-family: 'Inconsolata';
+  font-weight: normal;
+  color:black;
+}
+
+
+p{
+  font-family: Georgia;
+  line-height: 13px;
+  font-size:12px;
+  position: relative;
+  color:black;
+}
+
+
+#sup{vertical-align: super; display: inline;color:black;}
+#sup2{display: inline;color:black; font-size:20px;}
+
+.hide{
+  color:black;
+}
+
+#main_link1{width:300px; display: block; border: 1px solid black; margin-bottom:40px; padding:10px; padding:10px; background-color: white; color:black;}
+.next{display:none;}
+
+
+.bgtitle{
+  font-family: 'Merriweather', serif;
+  float:left;
+  font-size:60px;
+  color:black;
+  border: 1px solid black;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+  margin-right:40px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.firstline{
+  
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size:30px;
+  position: relative;
+}
+
+.nav-bar2{display: none;}
+.nav-bar{display: none;}
+ul{display: none;}
+li{display: none;}
+
+.zonnetje{
+    display: none;
+}
+.zonnetje2{
+    display: none;
+}
+
+
+
+.universe{
+  width:794px;height:40000px;
+  z-index:0;
+  overflow:hidden;
+  background-color: #fff;
+}
+.container{display: block; color:black; margin:0px;padding:0px;background-color: #fff;}
+
+
+
+#start {
+  height:1300px;
+  display: block;
+  margin-top:100px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  top:20px;
+  z-index:20;
+  width:800px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:20px;
+  padding-top: 40px;
+}
+
+
+
+#abstract {
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:30px;
+  padding-bottom:570px;
+  padding-top: 40px; 
+}
+
+
+
+
+
+#introduction {
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:100px;
+  padding-top: 40px;
+}
+
+
+
+
+#chapter1 {
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:100px;
+  padding-top: 40px;
+}
+
+
+
+#chapter2 {
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:990px;
+  padding-top: 40px;
+}
+
+
+
+
+#chapter3 {
+
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:788px;
+  padding-top: 40px;
+}
+
+
+
+#chapter4a {
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:20px;
+  padding-top: 40px;
+}
+
+
+
+#chapter4b {
+  display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:20px;
+  padding-top: 40px;
+}
+
+
+
+#chapter4c {
+
+ display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:20px;
+  padding-top: 40px;
+}
+
+
+
+#conclusion {
+display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:20px;
+  padding-top: 40px;
+}
+
+
+
+#references {
+
+ display: block;
+  margin:0px;
+  z-index:90;
+  width:432px;
+  position: relative;
+  background-color: #fff;
+  padding-right:40px;
+  padding-bottom:20px;
+  padding-top: 40px;
+}
+
+
+img.random{z-index:100; padding-top:50px; padding-bottom:10px; position:static!important; display: block!important;}
+
+.hidden2{
+  position:static;
+  display:block;
+  opacity:1;   
+  font-family: Georgia, serif;
+  color:black;
+  letter-spacing: 1px;
+  line-height: 12px;
+  font-size:10px;
+  width:230px;
+  padding-top: 0px;
+  padding-bottom:30px;
+  z-index:999;
+}
+#source{font-size: 10px;}
