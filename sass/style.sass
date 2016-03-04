@@ -1,0 +1,112 @@
+@import compass
+
+@import url(http://fonts.googleapis.com/css?family=PlayfairDisplay)
+
+@mixin ease
+  +transition-property(all)
+  +transition-duration(.6s)
+  +transition-timing-function(ease-in)
+
+*
+  +box-sizing(border-box)
+body
+  background: url('http://farm4.staticflickr.com/3485/3288052387_716d3696d8_o.jpg') no-repeat
+  background-size: 100%
+  background-position: top center
+  margin: 0
+  padding: 0
+  background-attachment: fixed
+  font-size: 22px
+  line-height: 32px
+  color: #333333
+  font-family: Playfair Display, Serif
+nav
+  background: #ffffff
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9999
+  border-bottom: 1px solid #333333
+  .inner
+    width: 60%
+    margin: 0 auto
+  ul
+    float: right
+    li
+      display: inline
+      margin: 0 0 0 50px
+h1
+  font-size: 120px
+  text-align: center
+  font-family: helvetica, sans-serif
+  text-transform: uppercase
+  color: #ffffff
+  margin: 25% 0
+  @media (max-width: 800px)
+    font-size: 60px
+a
+  text-decoration: none
+  color: #34495e
+  &:hover
+    color: #2c3e50
+    text-decoration: underline
+img
+  width: 100%
+.wrapper
+  background: #ffffff
+  width: 100%
+  min-height: 100%
+  margin: 0 0 0 0
+  position: relative
+.content-wrapper
+  width: 80%
+  margin: auto
+  padding: 10%
+  @media (max-width: 640px)
+    width: 100%
+    padding: 10% 2%
+  &:first-letter
+    font-size: 80px
+  .image-right
+    padding: 5% 0 5% 5%
+    width: 50%
+    float: right
+    opacity: .8
+    @include ease
+    font-size: 80%
+    font-style: italic
+    line-height: 20px
+    @media (max-width: 900px)
+      width: 100%
+      float: left
+      padding: 0 0 5% 0
+    img 
+      margin: 0 0 10px 0
+    &:hover
+      opacity: 1
+  .image-left
+    padding: 5% 5% 5% 0
+    width: 50%
+    float: left
+    opacity: .8
+    @include ease
+    font-size: 80%
+    font-style: italic
+    line-height: 20px
+    @media (max-width: 900px)
+      width: 100%
+      padding: 0 0 5% 0
+    img 
+      margin: 0 0 10px 0
+    &:hover
+      opacity: 1
+  .image-center
+    padding: 5% 0
+    width: 169%
+    position: relative
+    margin-left: -35%
+    @media (max-width: 640px)
+      width: 127%
+      margin-left: -13%
+    

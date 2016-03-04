@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=PlayfairDisplay);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("abstract.jpg");
+  background-size: 100%;
+  background-position: top center;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  font-size: 22px;
+  line-height: 32px;
+  color: #333333;
+  font-family: helvetica, sans-serif;
+}
+
+.container {
+  
+  max-width: 70%;
+  margin: 0 auto;
+  padding-left:10%;
+}
+
+h1 {
+  font-size: 170px;
+  text-align: center;
+  font-family: helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 16% 0;
+  margin-bottom: 20%;
+  margin-top: 15%;
+}
+
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  background: #ffffff;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 0 0 0;
+  position: relative;
+}
+
+.content-wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 5%;
+}
+
+.content-wrapper .image-center {
+  padding: 3 %;
+  width: 169%;
+  position: relative;
+  margin-left: -35%;
+  box-shadow: 10%;
+}
+@media (max-width: 640px) {
+  .content-wrapper .image-center {
+    width: 127%;
+    margin-left: -13%;
+  }
+}
+
+.nav-bar2 {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  left: 44%;
+  position: fixed;
+  bottom:-10px;
+  z-index: 1;
+
+
+}
+
+.nav-bar2 ul{
+  padding:0px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+    background-color: white;
+    list-style-type: none;
+
+}
+
+.nav-bar2 li a {
+  text-decoration: none;
+  text-align: center;
+  font-size:18px;
+  color: #000;
+}
