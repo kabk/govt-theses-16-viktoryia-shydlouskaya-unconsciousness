@@ -26,14 +26,13 @@ body {
 }
 
 h1 {
-  font-size: 170px;
+  font-size: 160px;
   text-align: center;
   font-family: helvetica, sans-serif;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 16% 0;
   margin-bottom: 20%;
-  margin-top: 15%;
+  margin-top: 0%;
 }
 
 
