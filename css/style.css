@@ -96,3 +96,76 @@ img {
   font-size:18px;
   color: #000;
 }
+post {
+  margin: 0 auto;
+  max-width: 40em;
+
+}
+  
+.post-marker::before {
+  content: "\00a0"; /* A non-breaking space glues a marker to its target word. */
+  
+}
+  
+.post-marker a {
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+    
+.post-marker a::before {
+  content: "[";  
+}
+  
+.post-marker a::after {
+  content: "]";  
+}
+    
+.post-subject {
+  position: relative;  
+}
+    
+.post-sidenote {
+  box-sizing: border-box;
+  color: #999;
+  display: none;
+  font-style: italic;
+  left: 100%;
+  padding-left: 1.5rem;
+  position: absolute;
+  top: 0;
+  width: 70%;
+}
+  
+.post-footnotes {
+  border-top: 1px solid #999;
+  color: #999;
+  padding-top: 1.5rem;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style-type: none;
+  padding-left:0;
+}
+
+ol ul li{
+  margin-bottom:0;
+}
+
+@media screen and (min-width: 50em) {
+  .post.has-sidenotes .post-marker {
+    display: none;
+  }
+      
+  .post.has-sidenotes .post-sidenote {
+    display: block;
+  }
+  
+  .post.has-sidenotes .post-footnotes {  
+    display: none;
+  }
+}
