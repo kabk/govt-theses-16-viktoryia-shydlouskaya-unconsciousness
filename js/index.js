@@ -1,22 +1,45 @@
-var $post = $('.post'),
-    $markers = $('.post-marker'),
-    $footnotes = $('.post-footnotes');
+'use strict';
 
-function createSidenotes() {
-    var $footnoteArray = $footnotes.children();
+// This expects a modern browser, but does not require any libraries. (Yes, it does not use jQuery.)
 
-    $markers.parent().wrap("<div class='post-subject'></div>");
+// Enable some array methods for results of DOM selectors:
+NodeList.prototype.__proto__ = Array.prototype;
 
-    for (var i = 0, len = $markers.length; i < len; i++) {
-        $($('.post-subject')[i]).append(
-            // role='complementary' provided for ARIA support
-            "<aside class='post-sidenote' role='complementary'><p>"
-            + $($footnoteArray[i]).html()
-            + "</p></aside>"
-        );
+function addSidenotes(content) {
+  var footnotesConverted = content.querySelectorAll('.footnote-ref > a').map(function convertFootnoteToSidenote(ref) {
+    var footnote = document.querySelectorAll(ref.getAttribute('href'))[0];
+    if (!footnote) {
+      return;
     }
-  
-    $post.addClass('has-sidenotes');
+
+    ref.parentNode.insertAdjacentHTML('afterend', '<span class="sidenote">\n      <span class="sidenote-number">' + ref.textContent + '</span>\n      ' + footnote.innerHTML + '\n    </span>');
+
+    return 1;
+  }).filter(function (x) {
+    return !!x;
+  }).length;
+
+  var linksConverted = content.querySelectorAll('a[title]').map(function convertLinkToSidenote(link) {
+    if (link.href[0] === '#') {
+      return;
+    }
+    if (link.matches('.sidenote a')) {
+      return;
+    }
+
+    var title = link.getAttribute('title');
+    var hostname = link.hostname;
+
+    link.insertAdjacentHTML('afterend', '<span class="sidenote">\n      <span class="sidenote-title">' + title + '</span> &ndash;\n      <a href="' + link.href + '">' + hostname + '</a>\n    </span>');
+
+    return 1;
+  }).filter(function (x) {
+    return !!x;
+  }).length;
+
+  if (0 < footnotesConverted + linksConverted) {
+    content.classList.add('has-sidenotes');
+  }
 }
 
-createSidenotes();
+document.querySelectorAll('article .content').map(addSidenotes);
