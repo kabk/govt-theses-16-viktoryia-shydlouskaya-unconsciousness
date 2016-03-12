@@ -12,16 +12,26 @@ body {
   margin: 0;
   padding: 0;
   background-attachment: fixed;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 32px;
   color: #333333;
   font-family: helvetica, sans-serif;
 }
 
+a {
+  color: blue;  
+}
+  
+p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  font-size: 15px;
+}
+
 .container {
   
-  max-width: 50%;
-  margin: 0%;
+  max-width: 70%;
+  margin: 0 auto;
   padding-left:10%;
 }
 
@@ -96,6 +106,7 @@ img {
   font-size:18px;
   color: #000;
 }
+
 .post {
   margin: 0 auto;
   max-width: 40em;
