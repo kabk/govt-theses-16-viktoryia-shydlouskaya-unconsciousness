@@ -67,7 +67,7 @@ h4{
 
 a {
   color: #666;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: #000;
@@ -200,7 +200,7 @@ img {
 }
 
 .nav-bar2 {
-  font-family: 'Fira Mono';
+  font-family: helvetica;
   font-weight: bold;
   text-transform: uppercase;
   left: 44%;
