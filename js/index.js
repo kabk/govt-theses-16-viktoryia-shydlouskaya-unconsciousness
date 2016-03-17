@@ -5,8 +5,13 @@
 // Enable some array methods for results of DOM selectors:
 NodeList.prototype.__proto__ = Array.prototype;
 
-function addSidenotes(content) {
-  var footnotesConverted = content.querySelectorAll('.footnote-ref > a').map(function convertFootnoteToSidenote(ref) {
+function addSidenotes(content, i) {
+
+
+  function convertFootnoteToSidenote(ref, i) {
+
+    ref.href = '#fn'+(i+1);
+
     var footnote = document.querySelectorAll(ref.getAttribute('href'))[0];
     if (!footnote) {
       return;
@@ -15,9 +20,18 @@ function addSidenotes(content) {
     ref.parentNode.insertAdjacentHTML('afterend', '<span class="sidenote">\n      <span class="sidenote-number">' + ref.textContent + '</span>\n      ' + footnote.innerHTML + '\n    </span>');
 
     return 1;
-  }).filter(function (x) {
-    return !!x;
-  }).length;
+
+  }
+
+
+  var footnotesConverted = content
+                            .querySelectorAll('.footnote-ref > a')
+                            .map(convertFootnoteToSidenote)
+                            .filter(function (x) {
+                                return !!x;
+                            }).length;
+
+
 
   var linksConverted = content.querySelectorAll('a[title]').map(function convertLinkToSidenote(link) {
     if (link.href[0] === '#') {
