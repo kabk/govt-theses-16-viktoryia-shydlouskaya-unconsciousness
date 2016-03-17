@@ -21,7 +21,7 @@ body {
 
 .appendix {
 
-  max-width: 70%;
+  max-width: 90%;
   padding-left:10%;
 }
 
@@ -32,8 +32,8 @@ body {
 
 .container {
   
-  max-width: 60%;
-  padding-left:10%;
+  max-width: 80%;
+  padding-left:20%;
 }
 
 h1 {
@@ -121,7 +121,7 @@ article {
 }
 
 header, .content {
-  max-width: 32em;
+  max-width: 100%;
   padding: 1em;
   margin-left: auto;
   margin-right: auto;
@@ -136,7 +136,7 @@ header, .content {
 
 @media screen and (min-width: 45em) {
   .content.has-sidenotes {
-    max-width: 60em;
+    max-width: 80em;
     *zoom: 1;
   }
   .content.has-sidenotes:before, .content.has-sidenotes:after {
@@ -147,7 +147,7 @@ header, .content {
     clear: both;
   }
   .content.has-sidenotes > *:not(.sidenote) {
-    width: 70%;
+    width: 80%;
     box-sizing: border-box;
   }
   .content.has-sidenotes .sidenote {
